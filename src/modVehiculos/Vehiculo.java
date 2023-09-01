@@ -13,17 +13,19 @@ public abstract class Vehiculo implements conducible {
         return nombre;
     }
 }
-    class Carro extends Vehiculo {
-    private int numPasajeros;
 
-    public Carro(String nombre, int maxPasajeros) {
+
+    class Carro extends Vehiculo {
+    public int numPasajeros;
+
+    public Carro(String nombre, int numPasajeros) {
         super(nombre);
-        this.numPasajeros = maxPasajeros;
+        this.numPasajeros = numPasajeros;
     }
 
     @Override
     public void acelerar(int velocidad) {
-        System.out.println("El automóvil " + getNombre() + " está acelerando a " + velocidad + " km/h.");
+        System.out.println("El automóvil " + getNombre() + " está acelerando a " + velocidad + " km/h. y tiene capaciudad para " + this.numPasajeros + " pasajeros");
     }
 
     @Override
